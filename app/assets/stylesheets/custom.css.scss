@@ -1,0 +1,62 @@
+$navbar-default-bg: black;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.center{
+    text-align: center
+}
+
+.jumbotron{
+    letter-spacing: -1px;
+    font-size: 1.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-image: asset-url("cover2.jpg");
+    background-size: cover;
+    height: 750px;
+}
+
+.article-actions{ 
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
+}
+.description{
+    margin-top: 0;
+}
+
+.article-title{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.article-body{
+    border-top: 1px solid #eaeaea;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#whatever{
+    color: #fff;
+}
+
+footer{
+    margin-top: 45px;
+    padding-top: 5px;
+    color: #777;
+    border-top: 1px solid #eaeaea;
+}
+
+footer small{
+    float: left;
+}
+footer ul{
+    float:right;
+    list-style: none;
+}
