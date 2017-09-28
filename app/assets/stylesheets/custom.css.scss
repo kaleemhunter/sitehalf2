@@ -20,9 +20,15 @@ $navbar-default-bg: black;
 .article-actions{ 
     border-top: 1px solid #eaeaea;
     padding-top: 5px;
+    margin-top: 0;
 }
 .description{
     margin-top: 0;
+}
+
+.listing{
+    list-style: none;
+    padding-left: 0;
 }
 
 .article-title{
@@ -33,6 +39,12 @@ $navbar-default-bg: black;
     border-top: 1px solid #eaeaea;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.article-meta-details{
+    margin-top: 15px;
+    border-top: 1px solid #eaeaea;
+    margin-bottom: 0;
 }
 
 .navbar-brand{

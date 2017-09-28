@@ -9,10 +9,12 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.6'
 # Use sqlite3 as the database for Active Record
-
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
+gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,7 +41,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3'
-  gem 'byebug', platform: :mri
+  gem 'byebug', git: 'https://github.com/deivid-rodriguez/byebug', :require => 'byebug'
+
 end
 
 group :development do
