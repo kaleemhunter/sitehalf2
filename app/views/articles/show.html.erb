@@ -9,15 +9,16 @@
 				</div>
 			</div>
 		</ul>
-		<h4 class="center description"><strong>Description:</strong></h4>
-			<hr>
+		<h5><strong>Description</strong></h5>
+		<div class="description">
 			<%= simple_format(@article.description) %>
-
-			<div class="article-meta-details">
-						<small>Created by: <%= @article.user.username if @article.user %>,
-						<%= time_ago_in_words(@article.created_at) %> ago,
-						last updated: <%= time_ago_in_words(@article.updated_at) %> ago</small>
-			</div>
+		</div>
+		<div class="article-meta-details">
+			<small>Created by: <%= @article.user.username if @article.user %>,
+					<%= time_ago_in_words(@article.created_at) %> ago,
+					last updated: <%= time_ago_in_words(@article.updated_at) %> ago</small>
+		</div>
+			<% if logged_in? && (current_user == @article.user || current_user.admin?) %>
 				<div class="article-actions">
 					<%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
 					<%= link_to "Delete this article", article_path(@article), method: :delete,
@@ -25,4 +26,6 @@
 																				class: "btn btn-xs btn-danger" %>
 					<%= link_to "View all articles", articles_path, class: "btn btn-xs btn-success" %>
 				</div>
+			<% end %>
+			<%= link_to "View all articles", articles_path, class: "btn btn-xs btn-success" %>
 	</div>
