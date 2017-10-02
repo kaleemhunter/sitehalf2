@@ -12,6 +12,14 @@
 		<h5><strong>Description</strong></h5>
 		<div class="description">
 			<%= simple_format(@article.description) %>
+				<% if @article.categories.any? %>
+					<div class="row">
+						&nbsp;&nbsp;&nbsp;&nbsp;Categories: 
+						<% @article.categories.each do |category| %>
+							<span class="badge"><%= link_to category.name, category_path(category) %> </span>
+						<% end %>
+					</div>
+				<% end %>
 		</div>
 		<div class="article-meta-details">
 			<small>Created by: <%= @article.user.username if @article.user %>,

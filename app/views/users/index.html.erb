@@ -10,7 +10,7 @@
 					<li class="article-title"><%= link_to user.username, user_path(user) %></li>
 					<li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
 					<% if logged_in? && (current_user == user || current_user.admin?) %> 
-						<li class="center"><%= link_to "Delete account", user_path(user), method: :delete, data: {confirm: "Are your sure you want to delete this user and all their articles?"}, class: "btn btn-danger btn-sm"%></li>
+						<li><%= link_to "Delete account", user_path(user), method: :delete, data: {confirm: "Are your sure you want to delete this user and all their articles?"}, class: "btn btn-danger btn-sm"%></li> 
 					<% end %>
 				</div>
 			</div>

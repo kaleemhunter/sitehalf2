@@ -17,6 +17,13 @@ $navbar-default-bg: black;
     height: 750px;
 }
 
+.badge{
+    background-color: #CEF6F5;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
 .article-actions{ 
     border-top: 1px solid #eaeaea;
     padding-top: 5px;
@@ -48,7 +55,7 @@ $navbar-default-bg: black;
 }
 
 .article-meta-details{
-    margin-top: 15px;
+    margin-top: 5px;
     border-top: 1px solid #eaeaea;
     margin-bottom: 0;
 }

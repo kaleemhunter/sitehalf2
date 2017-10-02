@@ -7,6 +7,14 @@
 				</div>
 				<div class="article-body">
 					<%= truncate(article.description, length: 100) %>
+					<% if article.categories.any? %>
+						<div class="row">
+							&nbsp;&nbsp;&nbsp;&nbsp;Categories: 
+							<% article.categories.each do |category| %>
+								<span class="badge"><%= link_to category.name, category_path(category) %> </span>
+							<% end %>
+						</div>
+					<% end %>
 					<div class="article-meta-details">
 						<small>Created by: <%= article.user.username if article.user%>,
 						<%= time_ago_in_words(article.created_at) %> ago,
